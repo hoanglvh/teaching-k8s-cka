@@ -1,9 +1,9 @@
 Toka15 - Examination
 Time: 19h30 - 22h30
 Date: 14/06/2023
-1. Create deployment ten deploy-nginx, image nginx:1.16 va replica=2 with record version. Then upgrade to version nginx:1.17 with record version. After that roll back to nginx:1.16 version. 
-2. Backup etcd, dat ten db backup la ten_hoc_vien.db
-3. Given a error deployment. Find and correct errors.
+1. Create deployment ten deploy-nginx, image nginx:1.16 va replica=2 with record version. Then upgrade to version nginx:1.17 with record version. After that roll back to nginx:1.16 version. (20d) 
+2. Backup etcd, dat ten db backup la ten_hoc_vien.db (10d)
+3. Given a error deployment. Find and correct errors. (20d)
 ```
 apiVersion: apps/v1
 kind: Deployment
@@ -50,11 +50,11 @@ spec:
     protocol: TCP
     targetPort: 8080
 ```
-4. Using JsonPath query to restrieve the osImage of all the nodes and store it in a file /opt/output/yourname.txt. The osImage are under the nodeInfo section under status of each node.
+4. Using JsonPath query to restrieve the osImage of all the nodes and store it in a file /opt/output/yourname.txt. The osImage are under the nodeInfo section under status of each node. (10d)
 
-5. Create a static pod named static-busybox on the master node that uses the busybox images and the commnad sleep 1000.
-6. Create a persistent volume, with the given specification: volume name: pv-storage; storage: 100Mi; AccessMode: ReadWriteMany; HostPath: /pv/pv-storage
-7. Create a pod called multi-container with two containers. 
+5. Create a static pod named static-busybox on the master node that uses the busybox images and the commnad sleep 1000. (10d)
+6. Create a persistent volume, with the given specification: volume name: pv-storage; storage: 100Mi; AccessMode: ReadWriteMany; HostPath: /pv/pv-storage (10d)
+7. Create a pod called multi-container with two containers.  (10d)
   - Container 1 name: alpha, image: nginx
   - Container 2 name: beta, image: busybox, command: sleep 4800
   - Environment Variables:
@@ -63,7 +63,7 @@ spec:
   - container 2:
     - name: beta 
    
-8. Create a pod called non-root-pod, image redis: alpine; runAsUser: 1000; fsGroup: 2000
+8. Create a pod called non-root-pod, image redis: alpine; runAsUser: 1000; fsGroup: 2000 (10d)
 
 Submit link
 - capture all results to word file.
