@@ -1,5 +1,15 @@
-###### Answer
+
+### Answer
+
+#### Check expire and renewal certificates in Kubernetes
+
+```bash
+kubeadm certs check-expiration
+
+kubeadm certs renew all
 ```
+
+```bash
 kubectl create deployment nginx-deploy --image=nginx:1.16 --port 80 --replicas 2 --dry-run=client -o yaml > nginx-deployment.yml
 
 kubectl apply -f nginx-deployment.yml --record
