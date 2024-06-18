@@ -26,3 +26,6 @@ This command returns the names of all the containers in the specified pod.
 
 ## Get all pod and IP
 kubectl get pod -o jsonpath='{range .items[*]}{.metadata.name}{"\t"}{.status.podIP}{"\n"}{end}'
+
+## Get Pod name and status
+kubectl get pod -o=custom-columns="POD_NAME:.metadata.name,POD_STATUS:.status.containerStatuses[].state"
